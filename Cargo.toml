@@ -9,9 +9,8 @@ license = "MIT OR Apache-2.0"
 hal = { package = "esp32-hal", version = "0.16.0" }
 esp-backtrace = { version = "0.9.0", features = ["esp32", "panic-handler", "exception-handler", "print-uart"] }
 esp-println = { version = "0.7.0", features = ["esp32"] }
-
-[dependencies.esp-wifi]
-features = ["esp32", "wifi", "esp-now"]
+esp-wifi = { version = "0.1.1", features = ["esp32", "wifi", "esp-now"] }
+heapless = "0.8.0"
 
 [profile.dev.package.esp-wifi]
 opt-level = 3
