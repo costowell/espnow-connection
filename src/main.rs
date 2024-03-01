@@ -68,8 +68,9 @@ fn main() -> ! {
                         // Get the value from ping map and set it to None
                         if let Ok(Some(Some(millis))) = peers.insert(r.info.src_address, None) {
                             println!(
-                                "Ping of {} ms with {:?}",
+                                "Ping of {} (RSSI: {}) ms with {:?}",
                                 current_millis() - millis,
+                                &r.info.rx_control.rssi,
                                 &r.info.src_address
                             );
                         }
